@@ -1,0 +1,14 @@
+syntax = "proto3";
+
+option csharp_namespace = "GrpcService1.Protos";
+
+service Customer{
+	rpc GetCustomer(FindCustomerRequest) returns (FindCustomerReply);
+}
+message FindCustomerRequest{
+	int32 id = 1;
+}
+message FindCustomerReply{
+	int32 id = 1;
+	string name = 2;
+}
